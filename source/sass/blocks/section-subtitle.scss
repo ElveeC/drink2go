@@ -1,0 +1,24 @@
+@use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.section-subtitle--promo {
+  font-size: 36px;
+  line-height: 48px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}

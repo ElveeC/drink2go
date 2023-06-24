@@ -1,0 +1,36 @@
+@use "../global/viewports.scss" as *;
+
+.advantages {
+  padding: 50px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 30px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    text-align: left;
+  }
+}

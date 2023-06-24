@@ -1,0 +1,69 @@
+@use "../global/variables.scss" as *;
+@use "../global/viewports.scss" as *;
+
+.promo-card {
+  padding: 20px 20px 60px;
+  text-align: center;
+  background-color: $promo-background;
+
+  &--lavender {
+    background-color: $promo-lavender-background;
+  }
+
+  &--espresso {
+    background-color: $promo-espresso-background;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 60px 80px 496px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 30px 80px 84px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    flex-direction: column;
+  }
+}
+
+.promo-card__image-wpapper {
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    order: 2;
+  }
+}
+
+.promo-card__text-wrapper {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.promo-card__price {
+  margin: 0;
+}
+
+.promo-card__price-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+}
+
+.promo-card__price-old {
+  color: $special-text-color;
+  text-decoration: line-through;
+}
+
+/*.promo-card__title {
+  margin: 0;
+}*/
+
+/*.promo-card__image-wpapper {
+  margin: 0 auto;
+}*/

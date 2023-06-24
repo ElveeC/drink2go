@@ -1,0 +1,11 @@
+//@use "../global/mixins.scss" as *;
+
+/*.user-list {
+  @include reset-list;
+}*/
+.user-list {
+  display: flex;
+  flex: wrap;
+  padding: 0;
+  list-style-type: none;
+}

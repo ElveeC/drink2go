@@ -1,0 +1,7 @@
+@use "../global/viewports.scss" as *;
+
+.slider__pagination {
+  @media (max-width: ($desktop-width - 1)) {
+    display: none;
+  }
+}

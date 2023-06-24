@@ -1,0 +1,30 @@
+@use "../global/viewports.scss" as *;
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*@media (min-width: $tablet-width) {
+  .main-header {
+    justify-content: center;
+  }
+}*/
+
+/*.main-header__nav {
+  margin-left: auto;
+}*/
+
+.main-header__logo-text {
+  @media (max-width: ($desktop-width - 1)) {
+    display: none;
+  }
+}
+
+.main-header__logo-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-right: 10vw;
+  }
+}

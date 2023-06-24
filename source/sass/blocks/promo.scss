@@ -1,0 +1,5 @@
+@use "../global/mixins.scss" as *;
+
+.promo__list {
+  @include reset-list;
+}

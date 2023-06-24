@@ -1,0 +1,8 @@
+@use "../global/viewports.scss" as *;
+
+.logo-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../global/viewports.scss" as *;
+
+.navigation-link {
+
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+  }
+}

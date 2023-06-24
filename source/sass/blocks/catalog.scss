@@ -1,0 +1,24 @@
+@use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.catalog {
+  padding: 50px 20px 44px;
+  background-color: $additional-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
+}
+
+.catalog__filter-group {
+  border: none;
+}
+
+.catalog__range-inputs {
+  display: flex;
+  flex-wrap: wrap;
+}

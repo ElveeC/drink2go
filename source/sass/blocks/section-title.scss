@@ -1,0 +1,20 @@
+@use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.section-title {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: $special-text-color;
+}
+
+.section-title--main {
+  text-transform: uppercase;
+}
+
+.section-title--footer {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
