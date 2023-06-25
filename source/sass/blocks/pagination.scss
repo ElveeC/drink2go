@@ -1,8 +1,9 @@
 @use "../global/mixins.scss" as *;
 
-.user-list {
+.pagination {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
+  column-gap: 20px;
 
   @include reset-list;
 }

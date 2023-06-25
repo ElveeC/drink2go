@@ -3,6 +3,8 @@
 
 .catalog {
   padding: 50px 20px 44px;
+  font-size: 16px;
+  line-height: 24px;
   background-color: $additional-background;
 
   @media (min-width: $tablet-width) {
@@ -14,11 +16,59 @@
   }
 }
 
+.catalog__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+  }
+}
+
+.catalog__filter-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+}
+
 .catalog__filter-group {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .catalog__range-inputs {
   display: flex;
   flex-wrap: wrap;
+}
+
+.catalog__filter-title {
+  margin-bottom: 20px;
+}
+
+.catalog__filter-list {
+  margin: 0;
+}
+
+.catalog__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.catalog__product-list {
+  margin: 0;
+}
+
+.catalog__sorting {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.catalog__pagination {
+  margin: 0;
 }

@@ -1,0 +1,62 @@
+@use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  padding: 8px 20px;
+  //min-height: 40px;
+  color: $base-color;
+  text-align: center;
+  background-color: $special-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--special {
+    color: $special-color;
+    background-color: $base-color;
+  }
+
+  &--buy {
+    text-decoration: none;
+  }
+
+  &--apply {
+    display: block;
+    min-width: 280px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      min-width: auto;
+    }
+  }
+
+  &--reset {
+    display: block;
+    min-width: 280px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      min-width: auto;
+    }
+  }
+
+  &--cart {
+    text-decoration: none;
+  }
+
+  &--pagination {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    //color: $special-color;
+    //background-color: $base-color;
+    text-decoration: none;
+  }
+}

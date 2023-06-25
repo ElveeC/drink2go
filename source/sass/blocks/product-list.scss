@@ -1,0 +1,16 @@
+@use "../global/mixins.scss" as *;
+@use "../global/viewports.scss" as *;
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}

@@ -15,17 +15,35 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    //display: flex;
     padding: 60px 80px 496px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    //display: flex;
     padding: 30px 80px 84px;
+  }
+
+  /*@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    flex-direction: column;
+  }*/
+}
+
+.promo-card__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    //padding: 60px 80px 496px;
   }
 
   @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
     flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1280px;
+    //padding: 30px 80px 84px;
   }
 }
 
@@ -41,6 +59,18 @@
   }
 }
 
+.promo-card__title {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.promo-card__subtitle {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
 .promo-card__price {
   margin: 0;
 }
@@ -49,6 +79,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: $desktop-width) {
     justify-content: start;
@@ -56,7 +87,7 @@
 }
 
 .promo-card__price-old {
-  color: $special-text-color;
+  color: $special-color;
   text-decoration: line-through;
 }
 

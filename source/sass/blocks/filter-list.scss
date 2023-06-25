@@ -1,8 +1,10 @@
 @use "../global/mixins.scss" as *;
 
-.user-list {
+.filter-list {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
 
   @include reset-list;
 }
