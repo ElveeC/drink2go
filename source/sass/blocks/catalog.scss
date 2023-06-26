@@ -24,8 +24,16 @@
   }
 }
 
+.catalog__products-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px auto;
+    column-gap: 30px;
+  }
+}
+
 .catalog__filter-wrapper {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;

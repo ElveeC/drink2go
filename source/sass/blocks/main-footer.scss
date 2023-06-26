@@ -1,0 +1,129 @@
+@use "../global/viewports.scss" as *;
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
+.main-footer {
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 40px;
+  }
+}
+
+.main-footer__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "social social social"
+      "shop media contacts";
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    grid-template-areas: "social shop media contacts";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.main-footer__social-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 22px 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: social;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.main-footer__logo-text {
+  @media (max-width: ($desktop-width - 1)) {
+    display: none;
+  }
+}
+
+.main-footer__online-shop {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: shop;
+    padding: 0;
+  }
+}
+
+.main-footer__shop-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+
+  @include reset-list;
+}
+
+.main-footer__shop-link {
+  text-decoration: none;
+}
+
+.main-footer__media {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: media;
+    padding: 0;
+  }
+}
+
+.main-footer__media-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+
+  @include reset-list;
+}
+
+.main-footer__media-link {
+  text-decoration: none;
+}
+
+.main-footer__contacts {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    grid-area: contacts;
+  }
+}
+
+.main-footer__contacts-wrapper {
+  font-style: normal;
+}
+
+.main-footer__contacts-phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-footer__copyright {
+  color: $additional-color;
+  text-align: center;
+}
+
+.main-footer__copyright-link {
+  color: inherit;
+  text-decoration: none;
+}

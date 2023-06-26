@@ -1,0 +1,10 @@
+@use "../global/mixins.scss" as *;
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+
+  @include reset-list;
+}
