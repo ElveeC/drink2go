@@ -3,8 +3,6 @@
 
 .catalog {
   padding: 50px 20px 44px;
-  font-size: 16px;
-  line-height: 24px;
   background-color: $additional-background;
 
   @media (min-width: $tablet-width) {
@@ -24,11 +22,109 @@
   }
 }
 
+.catalog__filter-control {
+  position: relative;
+  //display: block;
+
+  &--radio {
+    padding-left: 37px;
+  }
+
+  &--checkbox {
+    padding-left: 55px;
+  }
+}
+
+.catalog__control-mark {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border: 2px solid $additional-color;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    width: 42px;
+    border-radius: 12px;
+    background-color: $additional-color;
+  }
+}
+
+.catalog__filter-input {
+  &--radio:checked + .catalog__control-mark {
+    border: 2px solid $special-color;
+  }
+
+  &--radio:checked + .catalog__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: $special-color;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--checkbox:checked + .catalog__control-mark {
+    background-color: $special-color;
+    border: 2px solid $special-color;
+  }
+
+  &--checkbox:disabled + .catalog__control-mark {
+    background-color: $disabled-color;
+    border: 2px solid $disabled-color;
+  }
+
+  &--checkbox + .catalog__control-mark::before {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: $base-color;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--checkbox:checked + .catalog__control-mark::before {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background-color: $base-color;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.catalog__filter-input:disabled + .catalog__control-mark {
+  border: 2px solid $disabled-color;
+}
+
+.catalog__filter-input:disabled ~ .catalog__control-label {
+  color: $disabled-color;
+}
+
 .catalog__products-wrapper {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 318px auto;
     column-gap: 30px;
+    margin-bottom: 60px;
   }
 }
 
@@ -71,10 +167,34 @@
 }
 
 .catalog__sorting {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 26px;
   }
+}
+
+.catalog__sorting-label {
+  margin-right: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
+}
+
+.catalog__sorting-control {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $special-color;
+  background-color: $additional-background;
+  border: none;
 }
 
 .catalog__pagination {

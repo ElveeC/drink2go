@@ -1,14 +1,30 @@
 @use "../global/viewports.scss" as *;
 @use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
+  row-gap: 10px;
+  font-size: 16px;
+  line-height: 24px;
 
   @include reset-list;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
+  }
+}
+
+.pagination__link--current {
+  font-weight: 600;
+  color: $main-text-color;
+  background-color: $additional-background;
+}
+
+.pagination__text {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }
