@@ -192,12 +192,11 @@
             <form class="catalog__filter" action="https://echo.htmlacademy.ru/" method="get">
               <div class="catalog__filter-wrapper">
                 <fieldset class="catalog__filter-group">
-                  <legend class="catalog__filter-title filter-title">Цена</legend>
+                  <legend class="catalog__filter-title catalog__filter-title--price filter-title">Цена</legend>
 
                   <div class="catalog__range">
                     <div class="catalog__range-scale">
-                      <div class="catalog__range-bar" style="left: 42px;
-                      width: 136px;">
+                      <div class="catalog__range-bar">
                         <button class="catalog__range-toggle catalog__range-toggle--min">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
@@ -209,16 +208,16 @@
 
                     <div class="catalog__range-inputs">
                       <label class="catalog__range-label">
-                        <input class="catalog__range-input" type="number" value="0" name="min-price">
+                        <input class="catalog__range-input catalog__range-input--min" type="number" placeholder="0" name="min-price">
                       </label>
                       <label class="catalog__range-label">
-                        <input class="catalog__range-input" type="number" value="900" name="max-price" style="width: 37px;">
+                        <input class="catalog__range-input catalog__range-input--max" type="number" value="900" name="max-price">
                       </label>
                     </div>
                   </div>
                 </fieldset>
 
-                <fieldset class="catalog__filter-group">
+                <fieldset class="catalog__filter-group catalog__filter-group--milk">
                   <legend class="catalog__filter-title filter-title">Наличие молока</legend>
                   <ul class="catalog__filter-list filter-list">
                     <li class="catalog__filter-item">
@@ -256,7 +255,7 @@
                   </ul>
                 </fieldset>
 
-                <fieldset class="catalog__filter-group">
+                <fieldset class="catalog__filter-group catalog__filter-group--country">
                   <legend class="catalog__filter-title filter-title">Страна произрастания</legend>
                   <ul class="catalog__filter-list filter-list">
                     <li class="catalog__filter-item">
@@ -303,7 +302,7 @@
                 </fieldset>
               </div>
               <div class="catalog__button-wrapper">
-                <button class="catalog__button button button--apply" type="submit">Применить</button>
+                <button class="catalog__button catalog__button--apply button button--apply" type="submit">Применить</button>
                 <button class="catalog__button button button--reset button--special" type="reset">Сбросить</button>
               </div>
             </form>

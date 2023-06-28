@@ -22,6 +22,151 @@
   }
 }
 
+.catalog__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.catalog__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__range-scale {
+  position: relative;
+  margin-bottom: 34px;
+  width: 280px;
+  height: 2px;
+  background-color: $disabled-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+    width: 318px;
+  }
+}
+
+.catalog__range-bar {
+  position: absolute;
+  width: 241px;
+  height: 4px;
+  background-color: $range-color;
+
+  @media (min-width: $tablet-width) {
+    width: 203px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 298px;
+  }
+}
+
+.catalog__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: $base-color;
+  border: 2px solid $range-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    top: -12px;
+  }
+
+  &--max {
+    left: 236px;
+    top: -12px;
+
+    @media (min-width: $tablet-width) {
+      left: 179px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 274px;
+    }
+  }
+}
+
+.catalog__range-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+
+  &::after {
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 50%;
+    left: 136px;
+    background-color: #bdbdbd;
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      left: 107px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 154px;
+    }
+  }
+}
+
+.catalog__range-input {
+  padding: 8px 10px;
+  width: 118px;
+  height: 40px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid $range-color;
+
+  &--min {
+    margin-right: 44px;
+    color: $additional-color;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.catalog__filter {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+}
+
 .catalog__filter-control {
   position: relative;
   //display: block;
@@ -110,7 +255,7 @@
 }
 
 .catalog__filter-input:disabled ~ .catalog__control-label {
-  color: $disabled-color;
+  color: $additional-color;
 }
 
 .catalog__products-wrapper {
@@ -134,21 +279,42 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__filter-group {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
-}
 
-.catalog__range-inputs {
-  display: flex;
-  flex-wrap: wrap;
+
+  &--milk {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+
+    &--country {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .catalog__filter-title {
   margin-bottom: 20px;
+
+  &--price {
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__filter-list {
@@ -160,6 +326,24 @@
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 20px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.catalog__button {
+  @media (min-width: $desktop-width) {
+    width: calc(100%/2 - 10px);
+  }
+}
+
+.catalog__button--apply {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__product-list {
@@ -189,12 +373,20 @@
 
 .catalog__sorting-control {
   font-family: inherit;
+  width: 145px;
+  padding-right: 20px;
+  //padding-left: 10px;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   color: $special-color;
-  background-color: $additional-background;
+  background-color: transparent;
+  background-image: url("../../img/background/down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
   border: none;
+  appearance: none;
 }
 
 .catalog__pagination {
