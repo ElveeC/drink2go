@@ -16,9 +16,11 @@
 .section-subtitle--promo {
   font-size: 36px;
   line-height: 48px;
+  letter-spacing: 0.72px;
 
   @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 80px;
+    letter-spacing: 1.12px;
   }
 }

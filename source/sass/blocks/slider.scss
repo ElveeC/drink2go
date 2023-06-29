@@ -1,7 +1,67 @@
 @use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.slider {
+  position: relative;
+}
+
+.slider__button {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  top: 0;
+  background-color: transparent;
+  //border: none;
+  border: 3px solid black;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
 
 .slider__pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  margin: 0 auto;
+  padding: 0;
+
+  position: relative;
+  //left: 580px;
+  bottom: 84px;
+  list-style-type: none;
+
   @media (max-width: ($desktop-width - 1)) {
     display: none;
+  }
+}
+
+.slider__pagination-button {
+
+  width: 62px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  //top: 0;
+  background-image: linear-gradient(transparent 20px, $base-color 4px);
+  //background-image: linear-gradient($special-color 11px, red 10px, white 1px);
+
+  //background-image: linear-gradient(transparent 11px, $base-color 2px, transparent 11px);
+  //border: 1px solid black;
+  cursor: pointer;
+
+  &--current {
+    background-image: linear-gradient(transparent 20px, $special-color 4px);
   }
 }

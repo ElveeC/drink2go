@@ -2,7 +2,8 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee2go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -10,8 +11,12 @@
     <header class="page__header main-header">
       <div class="main-header__wrapper">
         <div class="main-header__logo-wrapper logo-wrapper">
-          <a class="main-header__logo logo">
-            <img class="main-header__logo-image" src="img/logo-mob.svg" width="32" height="36" alt="Логотип Coffeeshop.">
+          <a class="main-header__logo logo " href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo/logo-big.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-medium.svg">
+              <img class="main-header__logo-image" src="img/logo/logo-small.svg" width="32" height="36" alt="Логотип Coffeeshop.">
+            </picture>
           </a>
         <p class="main-header__logo-text logo-text">Интернет-магазин кофейных напитков</p>
         </div>
@@ -42,18 +47,26 @@
 
           <ul class="main-navigation__list main-navigation__list--user user-list">
             <li class="user-list__item">
-              <a class="user-list__login navigation-link" href="#">
-                Войти
+
+              <a class="user-list__login navigation-link navigation-link--user" href="#">
+                <svg class="user-list__icon nav-icon" aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#user"></use>
+                </svg>
+                <span class="user-list__text">Войти</span>
               </a>
             </li>
+
             <li class="user-list__item">
-              <a class="user-list__cart navigation-link" href="#">
-                Корзина
+              <a class="user-list__cart navigation-link navigation-link--user" href="#">
+                <svg class="user-list__icon nav-icon" aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#basket"></use>
+                </svg>
+                <span class="user-list__text">Корзина</span>
               </a>
             </li>
           </ul>
 
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+          <button class="main-navigation__toggle burger-button" type="button"><span class="visually-hidden">Открыть меню.</span></button>
         </nav>
 
       </div>
@@ -66,16 +79,21 @@
 
         <div class="promo__wrapper slider">
           <ul class="promo__list slider__list promo-list">
-            <li class="promo__item slider__item promo-card">
+            <li class="promo__item slider__item slider__item--current promo-card">
               <div class="promo-card__wrapper">
+
                 <div class="promo-card__image-wpapper">
-                  <img class="promo-card__image" src="img/slider/flat-white-mobile.png" width="280" height="280" alt="Декаф Флэт Уайт.">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/slider/flat-white-desktop.png 1x, img/slider/flat-white-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/slider/flat-white-tablet.png 1x, img/slider/flat-white-tablet@2x.png 2x">
+                    <img class="promo-card__image" src="img/slider/flat-white-mobile.png" width="280" height="280" srcset="img/slider/flat-white-mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
+                  </picture>
                 </div>
 
                 <div class="promo-card__text-wrapper">
                   <h3 class="promo-card__title section-title section-title--main">Новинка!</h3>
                   <h4 class="promo-card__subtitle section-subtitle section-subtitle--promo">Декаф Флэт Уайт</h4>
-                  <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                  <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
 
                   <div class="promo-card__price-wrapper">
                     <p class="promo-card__price">
@@ -85,15 +103,18 @@
                     <a class="promo-card__button button button--buy" href="#">Заказать</a>
                   </div>
                 </div>
-
               </div>
-
             </li>
 
             <li class="promo__item slider__item promo-card promo-card--lavender visually-hidden">
               <div class="promo-card__wrapper">
+
                 <div class="promo-card__image-wpapper">
-                  <img class="promo-card__image" src="img/slider/lavender-mobile.png" width="280" height="280" alt="Лавандовый Латте.">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/slider/lavender-desktop.png 1x, img/slider/lavender-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/slider/lavender-tablet.png 1x, img/slider/lavender-tablet@2x.png 2x">
+                    <img class="promo-card__image" src="img/slider/lavender-mobile.png" width="280" height="280" srcset="img/slider/lavender-mobile@2x.png 2x" alt="Лавандовый Латте.">
+                  </picture>
                 </div>
 
                 <div class="promo-card__text-wrapper">
@@ -114,8 +135,13 @@
 
             <li class="promo__item slider__item promo-card promo-card--espresso visually-hidden">
               <div class="promo-card__wrapper">
+
                 <div class="promo-card__image-wpapper">
-                  <img class="promo-card__image" src="img/slider/espresso-mobile.png" width="280" height="280" alt="Тройной Эспрессо.">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/slider/espresso-desktop.png 1x, img/slider/espresso-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/slider/espresso-tablet.png 1x, img/slider/espresso-tablet@2x.png 2x">
+                    <img class="promo-card__image" src="img/slider/espresso-mobile.png" width="280" height="280" srcset="img/slider/espresso-mobile@2x.png 2x" alt="Тройной Эспрессо.">
+                  </picture>
                 </div>
 
                 <div class="promo-card__text-wrapper">
@@ -140,17 +166,17 @@
 
           <ol class="slider__pagination">
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button slider__pagination-button-current" type="button">
+              <button class="slider__pagination-button slider__pagination-button--current button" type="button">
                 <span class="visually-hidden">Первый слайд.</span>
               </button>
             </li>
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button" type="button">
+              <button class="slider__pagination-button button" type="button">
                 <span class="visually-hidden">Второй слайд.</span>
               </button>
             </li>
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button" type="button">
+              <button class="slider__pagination-button button" type="button">
                 <span class="visually-hidden">Третий слайд.</span>
               </button>
             </li>
@@ -532,5 +558,6 @@
     </footer>
 
     <script src="./js/script.js" defer></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
+  }
 }
 
 @media (max-width: $mobile-width-only) { //temporary

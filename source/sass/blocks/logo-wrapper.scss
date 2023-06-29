@@ -4,5 +4,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
   }
 }
