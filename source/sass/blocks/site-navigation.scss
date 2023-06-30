@@ -7,12 +7,16 @@
 
   @include reset-list;
 
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.24px;
+  }
+
   @media (min-width: $desktop-width) {
     column-gap: 20px;
   }
 }
 
-@media (max-width: $mobile-width-only) { //temporary
+@media (max-width: $mobile-width-only) {
   .site-navigation {
     display: none;
   }

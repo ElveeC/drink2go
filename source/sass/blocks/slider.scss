@@ -11,8 +11,7 @@
   height: 100%;
   top: 0;
   background-color: transparent;
-  //border: none;
-  border: 3px solid black;
+  border: none;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -30,15 +29,13 @@
 }
 
 .slider__pagination {
+  position: relative;
   display: flex;
   justify-content: center;
   column-gap: 8px;
   margin: 0 auto;
   padding: 0;
-
-  position: relative;
-  //left: 580px;
-  bottom: 84px;
+  bottom: 97px;
   list-style-type: none;
 
   @media (max-width: ($desktop-width - 1)) {
@@ -53,15 +50,68 @@
   padding: 0;
   background-color: transparent;
   border-radius: 0;
-  //top: 0;
   background-image: linear-gradient(transparent 20px, $base-color 4px);
-  //background-image: linear-gradient($special-color 11px, red 10px, white 1px);
-
-  //background-image: linear-gradient(transparent 11px, $base-color 2px, transparent 11px);
-  //border: 1px solid black;
   cursor: pointer;
 
   &--current {
     background-image: linear-gradient(transparent 20px, $special-color 4px);
   }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    background-image: linear-gradient(transparent 20px, rgb(120, 89, 207, 0.25) 4px);
+  }
+
+  &:active {
+    background-color: transparent;
+    background-image: linear-gradient(transparent 20px, $special-color 4px);
+  }
+}
+
+.slider__icon-back {
+  fill: $special-color;
+
+  &:hover,
+  &:focus {
+    fill: $special-color;
+  }
+}
+
+.slider__icon-next {
+  fill: $special-color;
+}
+
+.slider__button:hover .slider__icon-back,
+.slider__button:focus .slider__icon-back {
+  fill: $special-color;
+}
+
+.slider__button:hover .slider__icon-next,
+.slider__button:focus .slider__icon-next {
+  fill: $special-color;
+}
+
+.slider__button--previous:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.slider__button--next:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+}
+
+.slider__button--disabled .slider__icon-next {
+  fill: $additional-color;
+}
+
+.slider__button--disabled .slider__icon-back {
+  fill: $additional-color;
+}
+
+.slider__button:disabled .slider__icon-next {
+  fill: $additional-color;
+}
+
+.slider__button:disabled .slider__icon-back {
+  fill: $additional-color;
 }

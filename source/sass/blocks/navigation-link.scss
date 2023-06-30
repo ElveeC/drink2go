@@ -5,6 +5,7 @@
   position: relative;
   display: block;
   padding: 20px 22px;
+  color: $main-text-color;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
@@ -30,10 +31,6 @@
       padding-top: 30px;
       padding-bottom: 30px;
     }
-  }
-
-  &:visited {
-    color: $main-text-color;
   }
 
   &:hover,

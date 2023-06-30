@@ -1,0 +1,30 @@
+@use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
+
+.map__wrapper {
+  margin: 0 auto;
+  width: 320px;
+  background-color: $promo-background;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 540px;
+  }
+}

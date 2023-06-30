@@ -31,7 +31,7 @@
   margin: 0;
   margin-bottom: 20px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 40px;
   }
 }
@@ -93,6 +93,19 @@
     @media (min-width: $desktop-width) {
       left: 274px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgb(215, 209, 233);
+  }
+
+  &:active {
+    background-color: $special-color;
+  }
+
+  &:disabled {
+    border: 2px solid $additional-color;
   }
 }
 
@@ -157,10 +170,18 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
+
+  &:focus {
+    border: 2px solid $special-color2;
+  }
+
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
 }
 
 .catalog__filter {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 44px;
@@ -169,7 +190,6 @@
 
 .catalog__filter-control {
   position: relative;
-  //display: block;
 
   &--radio {
     padding-left: 37px;
@@ -351,7 +371,7 @@
 }
 
 .catalog__sorting {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -359,12 +379,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 }
 
 .catalog__sorting-label {
-  margin-right: 8px;
+  margin-right: 16px;
 
   @media (min-width: $tablet-width) {
     margin-right: 10px;
@@ -375,7 +395,6 @@
   font-family: inherit;
   width: 145px;
   padding-right: 20px;
-  //padding-left: 10px;
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 600;
@@ -387,6 +406,13 @@
   background-position: right center;
   border: none;
   appearance: none;
+
+  @media (min-width: $tablet-width) {
+    width: 165px;
+    padding-right: 30px;
+    padding-left: 10px;
+    background-position: right 10px center;
+  }
 }
 
 .catalog__pagination {

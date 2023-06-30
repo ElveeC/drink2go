@@ -1,4 +1,5 @@
 @use "../global/viewports.scss" as *;
+@use "../global/variables.scss" as *;
 
 .main-navigation {
   display: flex;
@@ -14,7 +15,7 @@
 .main-navigation__list {
   margin: 0;
 
-  @media (max-width: $mobile-width-only) { // temporary
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 
@@ -23,7 +24,7 @@
   }
 
   &--site {
-    margin-right: 60px;
+    margin-right: 67px;
 
     @media (min-width: $desktop-width) {
       margin-right: 162px;
@@ -31,8 +32,20 @@
   }
 }
 
-@media (min-width: $tablet-width) { // temporary
-  .main-navigation__toggle {
+.main-navigation__toggle {
+  width: 60px;
+  height: 60px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.main-navigation--closed .main-navigation__toggle {
+  background: url("../../img/background/burger.svg") no-repeat center top 21px / 16px 16px;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  background: url("../../img/background/close.svg") no-repeat center top 20px / 16px 16px;
 }

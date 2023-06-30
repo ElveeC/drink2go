@@ -1,0 +1,14 @@
+@use "../global/variables.scss" as *;
+
+.footer-link {
+  color: $main-text-color;
+
+  &:hover,
+  &:focus {
+    color: $range-color;
+  }
+
+  &:active {
+    color: $special-color2;
+  }
+}

@@ -1,10 +1,42 @@
+@use "../global/variables.scss" as *;
 @use "../global/mixins.scss" as *;
 
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
   margin: 0;
 
   @include reset-list;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+
+  &--pinterest {
+    padding: 9px;
+  }
+
+  :active {
+    background-color: rgb(120, 89, 207, 0.25);
+  }
+}
+
+.social__icon {
+  fill: $additional-color;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:active .social__icon {
+  fill: $special-color;
+}
+
+.social__link:active {
+  background-color: rgb(120, 89, 207, 0.25);
 }

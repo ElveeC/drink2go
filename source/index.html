@@ -6,6 +6,12 @@
     <title>Coffee2go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+
   </head>
   <body class="page__body">
     <header class="page__header main-header">
@@ -21,7 +27,7 @@
         <p class="main-header__logo-text logo-text">Интернет-магазин кофейных напитков</p>
         </div>
 
-        <nav class="main-header__nav main-navigation">
+        <nav class="main-header__nav main-navigation main-navigation--closed main-navigation--nojs">
           <ul class="main-navigation__list main-navigation__list--site site-navigation">
             <li class="site-navigation__item site-navigation__item--сurrent">
               <a class="site-navigation__link navigation-link navigation-link--current" href="#">
@@ -66,7 +72,7 @@
             </li>
           </ul>
 
-          <button class="main-navigation__toggle burger-button" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
         </nav>
 
       </div>
@@ -84,6 +90,10 @@
 
                 <div class="promo-card__image-wpapper">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/flat-white-desktop.webp 1x, img/slider/flat-white-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/flat-white-tablet.webp 1x, img/slider/flat-white-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/slider/flat-white-mobile.webp 1x, img/slider/flat-white-mobile@2x.webp 2x">
+
                     <source media="(min-width: 1440px)" srcset="img/slider/flat-white-desktop.png 1x, img/slider/flat-white-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/slider/flat-white-tablet.png 1x, img/slider/flat-white-tablet@2x.png 2x">
                     <img class="promo-card__image" src="img/slider/flat-white-mobile.png" width="280" height="280" srcset="img/slider/flat-white-mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
@@ -111,6 +121,10 @@
 
                 <div class="promo-card__image-wpapper">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/lavender-desktop.webp 1x, img/slider/lavender-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/lavender-tablet.webp 1x, img/slider/lavender-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/slider/lavender-mobile.webp 1x, img/slider/lavender-mobile@2x.webp 2x">
+
                     <source media="(min-width: 1440px)" srcset="img/slider/lavender-desktop.png 1x, img/slider/lavender-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/slider/lavender-tablet.png 1x, img/slider/lavender-tablet@2x.png 2x">
                     <img class="promo-card__image" src="img/slider/lavender-mobile.png" width="280" height="280" srcset="img/slider/lavender-mobile@2x.png 2x" alt="Лавандовый Латте.">
@@ -138,6 +152,10 @@
 
                 <div class="promo-card__image-wpapper">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/espresso-desktop.webp 1x, img/slider/espresso-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/espresso-tablet.webp 1x, img/slider/espresso-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/slider/espresso-mobile.webp 1x, img/slider/espresso-mobile@2x.webp 2x">
+
                     <source media="(min-width: 1440px)" srcset="img/slider/espresso-desktop.png 1x, img/slider/espresso-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/slider/espresso-tablet.png 1x, img/slider/espresso-tablet@2x.png 2x">
                     <img class="promo-card__image" src="img/slider/espresso-mobile.png" width="280" height="280" srcset="img/slider/espresso-mobile@2x.png 2x" alt="Тройной Эспрессо.">
@@ -161,8 +179,18 @@
             </li>
           </ul>
 
-          <button class="slider__button slider__button--previous"><span class="visually-hidden">Предыдущий слайд</span></button>
-          <button class="slider__button slider__button--next"><span class="visually-hidden">Следующий слайд</span></button>
+          <button class="slider__button slider__button--previous">
+            <svg class="slider__icon-back" aria-hidden="true" focusable="false" width="11" height="20">
+              <use href="img/icons/stack.svg#slide-back"></use>
+            </svg>
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <button class="slider__button slider__button--next">
+            <svg class="slider__icon-next" aria-hidden="true" focusable="false" width="11" height="20">
+              <use href="img/icons/stack.svg#slide-next"></use>
+            </svg>
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
 
           <ol class="slider__pagination">
             <li class="slider__pagination-item">
@@ -195,7 +223,7 @@
             </li>
             <li class="advantages-list__item advantages-list__item--comfort">
               <h4 class="advantages-list__item-title">Удобство</h4>
-              <p class="advantages-list__description">Легко помещается и в карман, и в маленькую сумочку</p>
+              <p class="advantages-list__description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
             </li>
             <li class="advantages-list__item advantages-list__item--energy">
               <h4 class="advantages-list__item-title">Бодрость</h4>
@@ -203,7 +231,7 @@
             </li>
             <li class="advantages-list__item advantages-list__item--eco">
               <h4 class="advantages-list__item-title">Экологичность</h4>
-              <p class="advantages-list__description">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="advantages-list__description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -347,7 +375,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-1.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-1.webp 1x, img/catalog/coffee-can-1@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-1.png" width="130" height="188" srcset="img/catalog/coffee-can-1@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -362,7 +391,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-2.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-2.webp 1x, img/catalog/coffee-can-2@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-2.png" width="130" height="188" srcset="img/catalog/coffee-can-2@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -377,7 +407,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-3.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-3.webp 1x, img/catalog/coffee-can-3@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-3.png" width="130" height="188" srcset="img/catalog/coffee-can-3@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -392,7 +423,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-4.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-4.webp 1x, img/catalog/coffee-can-4@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-4.png" width="130" height="188" srcset="img/catalog/coffee-can-4@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -407,7 +439,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-5.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-5.webp 1x, img/catalog/coffee-can-5@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-5.png" width="130" height="188" srcset="img/catalog/coffee-can-5@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -422,7 +455,8 @@
                   <li class="catalog__product-item product-card">
                     <a class="product-card__image-link" href="#">
                       <picture>
-                        <img class="product-card__image" src="img/catalog/coffee-can-6.png" width="130" height="188" alt="Specialty Coffee.">
+                        <source type="image/webp" srcset="img/catalog/coffee-can-6.webp 1x, img/catalog/coffee-can-6@2x.webp 2x">
+                        <img class="product-card__image" src="img/catalog/coffee-can-6.png" width="130" height="188" srcset="img/catalog/coffee-can-6@2x.png 2x" alt="Specialty Coffee.">
                       </picture>
                     </a>
                     <a class="product-card__link" href="#">
@@ -440,12 +474,15 @@
           </div>
           <ul class="catalog__pagination pagination">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--back button button--special button--pagination button--back">
+              <a class="pagination__link pagination__link--back button button--special button--pagination button--back" href="#">
+                <svg class="pagination__icon pagination__icon--back" aria-hidden="true" focusable="false" width="10" height="10">
+                  <use href="img/icons/stack.svg#back"></use>
+                </svg>
                 <span class="pagination__text">Назад</span>
               </a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link button button--special button--pagination">1</a>
+              <a class="pagination__link button button--special button--pagination" href="#">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--current button button--special button--pagination" href="#">2</a>
@@ -455,6 +492,9 @@
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--next button button--special button--pagination button--next" href="#">
+                <svg class="pagination__icon pagination__icon--next" aria-hidden="true" focusable="false" width="10" height="10">
+                  <use href="img/icons/stack.svg#next"></use>
+                </svg>
                 <span class="pagination__text">Вперёд</span>
               </a>
             </li>
@@ -464,9 +504,17 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта.</h2>
-        <iframe class="map__image"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-        allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+        <div class="map__wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+            <img class="map__image" src="img/map/map-mobile.jpg" width="320" height="420" srcset="img/map/map-mobile@2x.jpg 2x" alt="Офис компании по адресу Санкт-Петербург, набережная реки Карповки, дом 5.">
+          </picture>
+        </div>
       </section>
     </main>
 
@@ -474,49 +522,61 @@
       <div class="main-footer__wrapper">
         <h2 class="visually-hidden">Наши контакты.</h2>
         <div class="main-footer__social-wrapper">
-          <a class="main-footer__logo">
-            <img class="main-footer__logo-image" src="img/footer-logo-mobile.svg" width="82" height="36" alt="Логотип Coffeeshop.">
+
+          <a class="main-footer__logo logo" href="#">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-big.svg">
+              <img class="main-footer__logo-image" src="img/logo/logo-medium.svg" width="82" height="36" alt="Логотип Coffeeshop.">
+            </picture>
           </a>
+
           <p class="main-footer__logo-text">Интернет-магазин кофейных напитков</p>
-        <section class="main-footer__social social">
-          <h3 class="visually-hidden">Социальные сети</h3>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">ВКонтакте.</span>
 
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Youtube.</span>
-
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Телеграм.</span>
-
-              </a>
-            </li>
-          </ul>
-        </section>
+          <section class="main-footer__social social">
+            <h3 class="visually-hidden">Социальные сети</h3>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <span class="visually-hidden">ВКонтакте.</span>
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20">
+                    <use href="img/icons/stack.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--pinterest" href="#">
+                  <span class="visually-hidden">Pinterest.</span>
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="22" height="22">
+                    <use href="img/icons/stack.svg#pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <span class="visually-hidden">Одноклассники.</span>
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20">
+                    <use href="img/icons/stack.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
 
         <section class="main-footer__online-shop">
           <h2 class="main-footer__section-title section-title section-title--footer">Интернет-магазин</h2>
           <ul class="main-footer__shop-list">
             <li class="main-footer__shop-item">
-              <a class="main-footer__shop-link" href="#">Каталог</a>
+              <a class="main-footer__shop-link footer-link" href="#">Каталог</a>
             </li>
             <li class="main-footer__shop-item">
-              <a class="main-footer__shop-link" href="#">Доставка</a>
+              <a class="main-footer__shop-link footer-link" href="#">Доставка</a>
             </li>
             <li class="main-footer__shop-item">
-              <a class="main-footer__shop-link" href="#">Способы оплаты</a>
+              <a class="main-footer__shop-link footer-link" href="#">Способы оплаты</a>
             </li>
             <li class="main-footer__shop-item">
-              <a class="main-footer__shop-link" href="#">О нас</a>
+              <a class="main-footer__shop-link footer-link" href="#">О нас</a>
             </li>
           </ul>
         </section>
@@ -525,13 +585,13 @@
           <h2 class="main-footer__section-title section-title section-title--footer"> Медиа</h2>
           <ul class="main-footer__media-list">
             <li class="main-footer__media-item">
-              <a class="main-footer__media-link" href="#">Блог</a>
+              <a class="main-footer__media-link footer-link" href="#">Блог</a>
             </li>
             <li class="main-footer__media-item">
-              <a class="main-footer__media-link" href="#">Информация для СМИ</a>
+              <a class="main-footer__media-link footer-link" href="#">Информация для СМИ</a>
             </li>
             <li class="main-footer__media-item">
-              <a class="main-footer__media-link" href="#">Правовая информация</a>
+              <a class="main-footer__media-link footer-link" href="#">Правовая информация</a>
             </li>
           </ul>
         </section>
@@ -548,16 +608,15 @@
 
         <h2 class="visually-hidden">Копирайт HTML Academy</h2>
         <span class="main-footer__copyright-text">Разработано в&nbsp;</span>
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
+          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="main-footer__copyright-text">HTML Academy</span>
             <svg class="main-footer__copyright-logo" width="12" height="16">
-              <use href="img/sprite.svg#copyright-image"></use>
+              <use href="img/icons/stack.svg#academy"></use>
             </svg>
           </a>
       </section>
     </footer>
 
-    <script src="./js/script.js" defer></script>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>

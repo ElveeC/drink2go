@@ -28,3 +28,16 @@
     display: none;
   }
 }
+
+.pagination__icon {
+  fill: $special-color;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__link:hover .pagination__icon,
+.pagination__link:focus .pagination__icon {
+  fill: $base-color;
+}

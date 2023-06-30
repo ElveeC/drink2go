@@ -17,4 +17,8 @@
   font-size: 14px;
   line-height: 20px;
   text-align: left;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
+  }
 }

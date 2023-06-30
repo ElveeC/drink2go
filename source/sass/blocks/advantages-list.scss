@@ -2,8 +2,9 @@
 @use "../global/mixins.scss" as *;
 
 .advantages-list {
-  /*padding: 0;
-  list-style-type: none;*/
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
 
   @include reset-list;
 
@@ -20,5 +21,66 @@
 
   @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
     text-align: left;
+  }
+}
+
+.advantages-list__item {
+  padding-top: 66px;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    background-position: left top;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-left: 0;
+    background-position: center top;
+  }
+
+  &--fast {
+    background-image: url("../../img/background/speed.svg");
+    background-size: 50px 56px;
+  }
+
+  &--comfort {
+    background-image: url("../../img/background/fit.svg");
+    background-size: 52px 56px;
+  }
+
+  &--energy {
+    background-image: url("../../img/background/energy.svg");
+    background-size: 42px 56px;
+  }
+
+  &--eco {
+    background-image: url("../../img/background/ecology.svg");
+    background-size: 46px 56px;
+  }
+}
+
+.advantages-list__item-title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.advantages-list__description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
